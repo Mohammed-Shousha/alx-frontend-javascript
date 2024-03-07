@@ -7,12 +7,6 @@ export default class Currency {
     this._name = name;
   }
 
-  validateString(value, name) {
-    if (typeof value !== 'string') {
-      throw new TypeError(`${name} must be a string`);
-    }
-  }
-
   get name() {
     return this._name;
   }
@@ -29,6 +23,12 @@ export default class Currency {
   set code(code) {
     this.validateString(code, 'Code');
     this._code = code;
+  }
+
+  validateString(value, name) {
+    if (typeof value !== 'string') {
+      throw new TypeError(`${name} must be a string`);
+    }
   }
 
   displayFullCurrency() {
