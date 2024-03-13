@@ -64,3 +64,13 @@ export function executeWork(
   console.log(msg);
   return msg;
 }
+
+type Subjects = "Math" | "History";
+
+export function teachClass(todayClass: Subjects): string {
+  if (todayClass === "Math") {
+    return "Teaching Math";
+  }
+
+  return "Teaching History";
+}
